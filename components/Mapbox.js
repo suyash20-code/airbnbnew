@@ -20,11 +20,11 @@ function Mapbox({ searchResults }) {
         latitude: center.latitude,
         zoom: 11,
       }}
-      style={{width: 600, height: 600}}
+      // style={{width: 600, height: 990}}
     >
       {searchResults.map((result) => (
         <div key={result.long}>
-          {/* <Marker
+          <Marker
             longitude={result.long}
             latitude={result.lat}
             offsetLeft={-20}
@@ -38,8 +38,8 @@ function Mapbox({ searchResults }) {
             >
               📌
             </p>
-          </Marker> */}
-          {/* popup shows if we click on marker 
+          </Marker> 
+           {/* popup shows if we click on marker  */}
           {selectedLocation.long === result.long ? (
             <Popup
               closeOnClick={true}
@@ -51,7 +51,7 @@ function Mapbox({ searchResults }) {
             </Popup>
           ) : (
             false
-          )} */}
+          )}
         </div>
       ))}
     </Map>
