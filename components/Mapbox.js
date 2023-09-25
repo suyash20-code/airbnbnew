@@ -20,7 +20,7 @@ function Mapbox({ searchResults }) {
         latitude: center.latitude,
         zoom: 11,
       }}
-      // style={{width: 600, height: 900}}
+      style={{width: 600, height: 600}}
     >
       {searchResults.map((result) => (
         <div key={result.long}>
